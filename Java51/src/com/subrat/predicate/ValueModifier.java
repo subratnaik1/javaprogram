@@ -12,11 +12,10 @@ public class ValueModifier {
 	System.out.println("increment by");
 	int inc=Integer.parseInt(sc.nextLine());
 	
-	
     Consumer<Integer>doubleValue= d->System.out.println(d*2);
     Consumer<Integer>incrementBy= i->System.out.println(i+inc);
     Consumer<Integer>squareValue= sq->System.out.println(sq*sq);
-    System.out.println(modifyValue(ov,doubleValue);
+    modifyValue(ov,doubleValue);
     modifyValue(ov,incrementBy);
     modifyValue(ov,squareValue);
     
