@@ -1,0 +1,22 @@
+package com.subrat.argument;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class AddFirstLast {
+
+	public static void main(String[] args) {
+
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter size");
+   int size=sc.nextInt();
+   int arr1[]=new int[size]; 
+   for(int i=0;i<size;i++) {
+	   arr1[i]=sc.nextInt();
+   }
+   int sum=arr1[0]+arr1[size-1];
+   System.out.println(sum);
+	}
+	
+
+}

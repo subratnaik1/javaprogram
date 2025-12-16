@@ -1,0 +1,19 @@
+package com.subrat.TrielAndError;
+
+@FunctionalInterface
+interface NIT
+{
+	String nit(String name);
+}
+public class Practice
+{
+	public static void main(String[] args) {
+		NIT nit = (String name) -> {
+			return name;
+		};
+		
+		NIT nit1 = (String name) -> name;
+		
+		System.out.println(nit.nit("Welcome to ")+nit1.nit("NARESHIT"));
+	}
+}
