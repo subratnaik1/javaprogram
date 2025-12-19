@@ -1,7 +1,7 @@
 package com.subrat.inharitance;
 
+import java.util.*;
 public class BankAccountPOlymorph {
-	import java.util.*;
 	public class BankApplication{
 	    public static void main(String []args){
 	        Scanner sc=new Scanner(System.in);

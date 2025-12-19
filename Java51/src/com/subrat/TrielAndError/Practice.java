@@ -1,19 +1,13 @@
 package com.subrat.TrielAndError;
 
-@FunctionalInterface
 interface NIT
 {
-	String nit(String name);
+	void myInterface(int a);
 }
-public class Practice
-{
+public class Practice {
 	public static void main(String[] args) {
-		NIT nit = (String name) -> {
-			return name;
-		};
-		
-		NIT nit1 = (String name) -> name;
-		
-		System.out.println(nit.nit("Welcome to ")+nit1.nit("NARESHIT"));
+		NIT nit = (int a) -> System.out.println(a+5);
+		nit.myInterface(15);
 	}
+	String si="kjn";
 }
