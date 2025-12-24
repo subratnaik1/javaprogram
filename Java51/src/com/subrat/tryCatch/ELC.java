@@ -1,0 +1,86 @@
+package com.subrat.tryCatch;
+
+class FinancialTransaction{
+	public void processTransaction(double amount,long accno ) {
+		try {
+			if(amount<=0) {
+				throw new IllegalArgumentException();				
+			}
+			IO.println("successful transaction");
+		}
+		catch( IllegalArgumentException e) {
+			IO.println("Error processing transaction: Transaction amount must be positive.");
+		}
+		}
+	}
+public class ELC {
+void main() {
+	try {
+		double amount=Double.parseDouble(IO.readln("Transaction amount:"));
+		long accno=Integer.parseInt(IO.readln());		
+		FinancialTransaction f=new FinancialTransaction();
+		f.processTransaction(amount,accno);
+	}
+	catch(NumberFormatException e) {
+	IO.println("Invalid input: Please enter a valid number for transaction amount.");	
+	}
+}
+}
+//Assignment : 04
+//================
+//Financial Transaction Validation
+//
+//Objective:
+//Write a Java program that validates and processes financial transaction data entered by a user. 
+//Use a multi-catch block to handle exceptions related to input validation and processing.
+//
+//Instructions:
+//-------------
+//-> Create a BLC class named FinancialTransaction.
+//
+//-> Implement a processTransaction method that:
+//   Method name : processTransaction
+//   Access Modifiers : public
+//   Return type : void
+//   Parameters : double, long
+//
+//   Accepts user input for transaction details such as transaction amount and account number.
+//   Validate the transaction amount and account number.
+//   Throw an IllegalArgumentException if the transaction amount is negative or zero. otherwise print appropriate messages for successful transaction
+//
+//-> Uses a multi-catch block to handle exceptions:
+//   NumberFormatException for invalid numeric inputs.
+//   IllegalArgumentException for invalid transaction amount (negative or zero).
+//   RuntimeException for other unexpected errors during processing.
+//   
+//-> Implement the main method in an ELC class.
+//
+//   Create an instance of FinancialTransaction.
+//   Prompt the user to input transaction details.
+//   Call the processTransaction method with user inputs and test different scenarios.
+//
+//
+//
+//TEST CASE 1 :
+//-------------- 
+//Transaction amount: 500
+//Account number: 1234567890
+//Expected Output:
+//Processing transaction...
+//Transaction successful: Amount Rs.500.0 transferred to account 1234567890
+//
+//
+//TEST CASE 2 :
+//-------------- 
+//Transaction amount: -100
+//Account number: 9876543210
+//Expected Output:
+//Error processing transaction: Transaction amount must be positive.
+//
+//
+//TEST CASE 3 :
+//-------------- 
+//Transaction amount: abc
+//Account number: 4567890123
+//Expected Output:
+//Invalid input: Please enter a valid number for transaction amount.
