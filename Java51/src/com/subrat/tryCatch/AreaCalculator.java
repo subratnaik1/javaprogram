@@ -8,8 +8,12 @@ public class AreaCalculator {
     Scanner sc=new Scanner(System.in);
     double length=Double.parseDouble(IO.readln("enter leangth"));
     double bredth=Double.parseDouble(IO.readln("enter bredth"));
-    calculateArea(length,bredth);
-    
+    try {
+    	calculateArea(length,bredth);  	
+    }
+    catch(IllegalArgumentException e) {
+    	IO.println("error");
+    }    
 	}
 	public static double calculateArea(double length,double bredth) {
 		

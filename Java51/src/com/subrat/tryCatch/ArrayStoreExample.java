@@ -17,10 +17,7 @@ public class ArrayStoreExample {
     			String s=sc.nextLine();
     			if(s.matches("\\d+")) {
     				obj[i]=Integer.parseInt(s);
-    			}
-    			else {
-    				obj[i]=s;
-    			}
+    			}   			
     		} 		
     	}
     	catch(ArrayStoreException e) {
