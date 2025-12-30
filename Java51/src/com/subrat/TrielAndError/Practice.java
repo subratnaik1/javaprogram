@@ -2,38 +2,20 @@ package com.subrat.TrielAndError;
 
 
 public class Practice{
-	   public static void main(String[] args) throws Exception
-		{
-	      System.out.println("Enter main()");
-	      try
-	      {
-			methodA();
-	      }
-	      catch (Exception e)
-	      {
-			  System.out.println(e);
-	      }
-	      System.out.println("Exit main()");
-	   }
-	 
-	   public static void methodA() throws Exception
-		   {
-	      System.out.println("Enter methodA()");
-	      methodB();
-	      System.out.println("Exit methodA()");
-	   }
-	 
-	   public static void methodB() throws Exception
-		   {
-	      System.out.println("Enter methodB()");
-	      	methodC();
-	      System.out.println("Exit methodB()");
-	   }
-	 
-	   public static void methodC() throws Exception
-		   {
-	      System.out.println("Enter methodC()");
-	       System.out.println(1/0);
-	      System.out.println("Exit methodC()");
-	   }
+	void main(){
+		
+		int arr[]= {1,4,3,5,2,6,5};
+		int find=Integer.parseInt(IO.readln("enter Searching element"));
+		boolean flag=false;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==find) {
+			IO.println("element found at index "+i);
+			flag=true;
+			return;
+			}			
+		}
+		if(flag==false) {
+			IO.println("Output: Element not found");
+		}
 	}
+}
