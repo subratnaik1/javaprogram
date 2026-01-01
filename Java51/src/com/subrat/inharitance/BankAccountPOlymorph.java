@@ -7,12 +7,12 @@ public class BankAccountPOlymorph {
 	        Scanner sc=new Scanner(System.in);
 	        int choice=sc.nextInt();
 	        BankAccount b;
+	        b=new SavingsAccount(accountHolderName,AccountNumber,balance);
 	        if(choice==1){
 	            String accountHolderName=sc.next();
 	            String AccountNumber=sc.next();
 	            double balance=sc.nextDouble();
 
-	          b=new SavingsAccount(accountHolderName,AccountNumber,balance);
 	            b.displayAccountDetails();
 	            b.calculateInterest();
 	        }
