@@ -22,6 +22,7 @@ void main() {
 	}
      IO.println(Collections.min(v1));
      IO.println(Collections.max(v1)); 
+  TreeSet
    
 }}
 
