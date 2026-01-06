@@ -1,6 +1,4 @@
 package com.subrat.TrielAndError;
-
-
 public class VectorDemo
 {
 	public static void main(String[] args) 
@@ -28,10 +26,7 @@ class Moof
 	public int getMoofValue()
 	{
 		return moofValue;
-	}
-	
-
-	
+	}	
 public boolean equals(Object o)
 {
 	if((o instanceof Moof)&&(((Moof)o).getMoofValue()==this.moofValue))
