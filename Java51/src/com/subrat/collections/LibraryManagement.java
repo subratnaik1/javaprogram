@@ -13,7 +13,6 @@ class Library {
 			IO.println(bk);
 		}
 	}
-
 	public void issueBook(Vector<Book> is, Scanner sc) {
 		System.out.println("enter id of thr book you want to issue");
 		int id = sc.nextInt();
@@ -23,7 +22,6 @@ class Library {
 			}
 		}
 	}
-
 	public void searchBook(Vector<Book> s1, Scanner sc) {
 		System.out.println("Enter keyword to search by title or author:");
 		String keword = sc.nextLine();
@@ -36,12 +34,10 @@ class Library {
 			} 
 		}
 		if(isFound==false) {
-			IO.println("not found");
-			
+			IO.println("not found");		
 		}
 	}
 }
-
 public class LibraryManagement {
 	void main() {
 		Scanner sc = new Scanner(System.in);
