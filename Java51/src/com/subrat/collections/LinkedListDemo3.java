@@ -2,7 +2,7 @@ package com.subrat.collections;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
-
+       
 public class LinkedListDemo3 {
 	void main() {
 		LinkedList<String> city = new LinkedList<>();
