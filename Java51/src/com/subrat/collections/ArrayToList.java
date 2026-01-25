@@ -4,15 +4,27 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class ArrayToList{
-	
-	public static List<String> convertToList(String[] inputArray) {
-		return new ArrayList<>(Arrays.asList(inputArray));
-		
+class Conversion{
+	public static void convertToList(String[] inputArray) {
+		List<String>list = new ArrayList<>();
+		for(int i=0;i<inputArray.length;i++) {
+			list.add(inputArray[i]);
+		}
+		IO.println(list.toString());
+		IO.println(list.size());
 	}
 }
-public class ArrToList {
 
+public class ArrayToList {
+  void main() {
+	  int size = Integer.parseInt(IO.readln("enter size"));
+	  String arr[] = new String[size];
+	  for(int i=0;i<size;i++) {
+		  String value = IO.readln("enter value for "+i+" index");
+		  arr[i]=value;
+	  }
+	  Conversion.convertToList(arr);
+  }
 }
 //Program: 2
 //----------------

@@ -28,9 +28,9 @@ public class CollectionDemo {
     user.add("subrat@gmail.com");
     user.add("raj@gmail.com");
     user.add("scott@gmail.com");
-   IO.println(user);
+    IO.println(user);
     Map map=new Hashtable();//hashtable extends dictionary 
-  
+    
     map.put("subrat@gmail","sn123");
     IO.println(map);
 	}
