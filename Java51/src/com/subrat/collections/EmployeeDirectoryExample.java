@@ -1,0 +1,137 @@
+package com.subrat.collections;
+
+import java.util.ArrayList;
+
+class Employee {
+	private String name;
+	private String position;
+	private Double salary;
+
+	public Employee(String name, String position, Double salary) {
+		super();
+		this.name = name;
+		this.position = position;
+		this.salary = salary;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", position=" + position + ", salary=" + salary + "]";
+	}
+
+}
+
+class Directory {
+	ArrayList<Employee> e = new ArrayList<>();
+
+	void addEmployee(Employee emp) {
+		e.add(emp);
+	}
+
+	void displayAllEmployees() {
+		for (Employee e1 : e) {
+			IO.println(e1);
+		}
+	}
+
+	void updateEmployee() {
+		int index = Integer.parseInt(IO.readln("enter ehich index to update"));
+		
+		if (index >= 0 && index < e.size()) {
+			String name=IO.readln("enter name");
+			String position=IO.readln("enter position");
+			Double salary=Double.parseDouble(IO.readln("enter salary"));
+			Employee emp = e.get(index);
+			emp.setName(name);
+			emp.setPosition(position);
+			emp.setSalary(salary);
+			IO.println("updated");
+			displayAllEmployees();
+		}
+		else {
+			IO.println("index not found");
+		}
+	}
+	void deleteEmployee() {
+		int index = Integer.parseInt(IO.readln("enter ehich index to delete"));
+		e.remove(index);
+	}
+}
+
+public class EmployeeDirectoryExample {
+	void main() {
+    Employee e1=new Employee("alice","manager",5000.0);
+    Employee e2=new Employee("bob","superviser",20000.0);
+	
+    Directory d=new Directory();
+    d.addEmployee(e1);
+    d.addEmployee(e2);
+    d.displayAllEmployees();
+    d.updateEmployee();
+}
+}
+
+//Program-1
+//=========
+//Employee Directory:
+//Develop an employee directory that stores employee information (name, position, salary) and allows CRUD operations using collections.
+//
+//Employee Class:
+//This class represents an employee with attributes like name, position, and salary.
+//It has a constructor to initialize an employee's details and getters/setters to access and modify these details.
+//The toString() method is overridden to provide a string representation of an employee's details.
+//
+//Directory Class:
+//This class manages a collection of Employee objects using an ArrayList.
+//The addEmployee() method adds an employee to the directory.
+//The displayAllEmployees() method prints details of all employees in the directory.
+//The updateEmployee() method updates an employee's information at a specified index in the directory.
+//The deleteEmployee() method removes an employee from the directory at a specified index.
+//
+//EmployeeDirectoryExample Class (Main Class):
+//This class contains the main() method where an instance of Directory is created.
+//Two employees, "Alice" and "Bob," are added to the directory with their respective positions and salaries.
+//The displayAllEmployees() method is called to show all employees.
+//The details of "Bob" are updated to reflect a change in position and salary.
+//"Alice" is deleted from the directory.
+//Finally, the updated list of employees is displayed again.
+//
+//
+//Output:-
+//Employee{name='Alice', position='Manager', salary=60000.0}
+//Employee{name='Bob', position='Developer', salary=50000.0}
+//
+//Employee{name='Alice', position='Manager', salary=60000.0}
+//Employee{name='Bob', position='Senior Developer', salary=55000.0}
+//
+//Employee{name='Bob', position='Senior Developer', salary=55000.0}
+//
+//Initial display after adding "Alice" as a Manager and "Bob" as a Developer.
+//Display after updating "Bob's" information to reflect the change in position and salary.
+//Display after deleting "Alice" from the directory.
+//Final display of the remaining employee, "Bob", with his updated information.
+//
