@@ -10,6 +10,6 @@ void main() {
 	l1.add("shubham");
 	l1.add("azad");
 	l1.add("bharat");
-	l1.stream()
+	l1.stream();
 }
 }
