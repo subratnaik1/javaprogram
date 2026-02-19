@@ -22,8 +22,7 @@ public class AddEmpDAO {
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-		}
-		
+		}		
 		return rowCount;
 	}
 }

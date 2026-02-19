@@ -8,6 +8,7 @@ static Connection con=null;
 static {
 	try {
 	Class.forName(DBInfo.driver);
+	IO.println("hiii");
 	con=DriverManager.getConnection(DBInfo.dbUrl, DBInfo.dbUname, DBInfo.dbPwd);
 	}
 	catch(Exception e) {
