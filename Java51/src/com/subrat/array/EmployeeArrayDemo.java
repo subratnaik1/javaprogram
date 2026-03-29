@@ -1,4 +1,4 @@
-package com.subrat.argument;
+package com.subrat.array;
 
 class Employee {
 	private int id;

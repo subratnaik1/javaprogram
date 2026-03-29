@@ -1,4 +1,4 @@
-package com.subrat.argument;
+package com.subrat.array;
 
 public class CommonElements {
 void main() {
