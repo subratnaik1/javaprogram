@@ -3,17 +3,18 @@ package com.string.Logicals;
 public class PalindromeString {
 
 	public static void main(String[] args) {
-		String str = "abcba";
-		boolean isPalendrome = true;
-		for (int i = 0; i < str.length() / 2; i++) {
-			if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
-				System.out.println("not palendrome");
-				isPalendrome = false;
-				return;
+		String str = "ababa";
+		boolean palindrome = true;
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
+				palindrome = false;
 			}
 		}
-		if (isPalendrome == true) {
-			System.out.println("palendrome");
+		if (!palindrome) {
+			System.out.println("not palindrome");
+		}
+		else {
+			System.out.println("palindrome");
 		}
 	}
 
