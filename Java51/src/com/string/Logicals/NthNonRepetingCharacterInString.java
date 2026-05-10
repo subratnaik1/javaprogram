@@ -1,5 +1,4 @@
 package com.string.Logicals;
-
 public class NthNonRepetingCharacterInString {
 public static void main(String[] args) {
 	String str="swijkss";

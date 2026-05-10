@@ -1,20 +1,17 @@
 package com.subrat.array;
 
+
 public class RemoveDublicateFromArray {
 
 	public static void main(String[]args) {
-		int arr[]=new int[] {4,4,5,5,3,2,3};
-		for(int i=0;i<arr.length;i++) {
-			boolean unique=true;
-			for(int j=i+1;j<arr.length;j++) {
-				if(arr[i]==arr[j]) {
-					unique=false;
-					break;					
-				}
-			}
-			if(unique) {
-				System.out.print(arr[i]+" ");
-			}
+	String str="aBcd";
+	for(int i=0;i<str.length();i++) {
+		if(str.charAt(i)>'A'&& str.charAt(i)<'Z') {
+			char ch=str.charAt(i);
+			ch=(char)(ch-32);
+			System.out.println(ch);
 		}
+		
+	}
 	}
 }
