@@ -3,7 +3,7 @@ package com.subrat.advancedLogicalQu;
 import java.util.Arrays;
 import java.util.List;
 
-public class PrintOnlyIntegerFromArray {
+public class PrintOnlyDigitFromArray {
 	public static void main(String[] args) {
 		 String [] s = {"abc", "123", "456", "xyz"};
 		List<Integer>list= Arrays.stream(s)
