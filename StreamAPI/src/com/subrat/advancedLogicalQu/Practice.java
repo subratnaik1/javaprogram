@@ -1,17 +1,21 @@
 package com.subrat.advancedLogicalQu;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-
 public class Practice {
+	private static Practice obj;
+	
+	private Practice() {};
+	
+	public static Practice getInstance() {
+		if(obj==null) {
+			obj=new Practice();		
+		}
+		return obj;
+	}
+	
 	public static void main(String[] args) {
-		String s[]={"subrat","rahul"};
-		Object[] a=Arrays.stream(s).map(c->Comparator.reverseOrder()).toArray();
-		System.out.println(Arrays.toString(a));
+		Practice p=Practice.getInstance();
+		Practice p2=Practice.getInstance();
+		System.out.println(p==p2);
+		
 	}
 }
